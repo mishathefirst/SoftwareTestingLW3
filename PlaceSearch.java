@@ -41,10 +41,10 @@ public class Test2Test {
   public void test2() {
     driver.get("https://wikimapia.org/#lang=ru&lat=55.750000&lon=37.616600&z=12&m=w");
     driver.manage().window().setSize(new Dimension(1550, 838));
-    driver.findElement(By.id("search-input")).click();
-    driver.findElement(By.id("search-input")).click();
-    driver.findElement(By.id("search-input")).sendKeys("Сочи");
-    driver.findElement(By.id("search-input")).sendKeys(Keys.ENTER);
+    driver.findElement(By.xpath("//search-input")).click();
+    driver.findElement(By.xpath("//search-input")).click();
+    driver.findElement(By.xpath("//search-input")).sendKeys("Сочи");
+    driver.findElement(By.xpath("//search-input")).sendKeys(Keys.ENTER);
     driver.switchTo().frame(1);
     driver.findElement(By.cssSelector(".search-result-item:nth-child(1) strong")).click();
     driver.switchTo().defaultContent();
